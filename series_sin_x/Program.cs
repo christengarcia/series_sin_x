@@ -30,5 +30,12 @@ namespace series_sin_x
             }
             Console.WriteLine("Sin({0})={1}", deg, s);
         }
+
+        public static void Main()
+        {
+            Sine s = new Sine();
+            s.ReadData();
+            s.SineSeries();
+        }
     }
 }
