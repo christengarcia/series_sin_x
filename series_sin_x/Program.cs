@@ -16,5 +16,19 @@ namespace series_sin_x
             Console.WriteLine("Enter the Angle in Degrees:");
             deg = Convert.ToInt32(Console.ReadLine());
         }
+
+        public void SineSeries()
+        {
+            float x, s = 0.0f, t;
+            x = (float)Math.PI * deg / 180f;
+            s = x;
+            t = x;
+            for (int i = 1; i <= n; i++)
+            {
+                t = (-t * x * x) / ((2 * i) * (2 * i + 1));
+                s = s + t;
+            }
+            Console.WriteLine("Sin({0})={1}", deg, s);
+        }
     }
 }
